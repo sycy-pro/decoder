@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD {C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.v}
+

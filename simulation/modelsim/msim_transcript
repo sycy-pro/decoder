@@ -1,0 +1,571 @@
+# Reading C:/Intel/Quartus/modelsim_ase/tcl/vsim/pref.tcl
+# do tea_asmd_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/Intel/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD {C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:02 on May 25,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD" C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv 
+# -- Compiling module brute_force
+# 
+# Top level modules:
+# 	brute_force
+# End time: 21:35:02 on May 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD {C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:02 on May 25,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD" C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv 
+# -- Compiling module tea_asmd
+# 
+# Top level modules:
+# 	tea_asmd
+# End time: 21:35:02 on May 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do test.do
+# ** Error: No Design Loaded!
+# Error in macro ./test.do line 1
+# No Design Loaded!
+#     while executing
+# "restartCmd -nowave -force"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval restartCmd $args"
+#     (procedure "restart" line 18)
+#     invoked from within
+# "restart -nowave -force"
+vsim work.brute_force
+# vsim work.brute_force 
+# Start time: 21:35:10 on May 25,2020
+# Loading sv_std.std
+# Loading work.brute_force
+# Loading work.tea_asmd
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[0]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[1]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[2]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[3]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[4]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[5]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[6]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[7]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[8]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[9]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[10]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[11]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[12]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[13]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[14]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[15]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[16]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[17]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[18]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[19]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[20]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[21]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[22]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[23]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[24]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[25]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[26]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[27]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[28]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[29]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[30]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[31]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[32]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[33]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+do test.do
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[0]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[1]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[2]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[3]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[4]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[5]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[6]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[7]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[8]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[9]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[10]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[11]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[12]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[13]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[14]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[15]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[16]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[17]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[18]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[19]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[20]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[21]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[22]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[23]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[24]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[25]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[26]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[27]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[28]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[29]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[30]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[31]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[32]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[33]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+run
+restart
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[0]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[1]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[2]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[3]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[4]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[5]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[6]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[7]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[8]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[9]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[10]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[11]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[12]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[13]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[14]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[15]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[16]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[17]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[18]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[19]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[20]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[21]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[22]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[23]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[24]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[25]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[26]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[27]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[28]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[29]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[30]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[31]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[32]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[33]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+run
+restart
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[0]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[1]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[2]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[3]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[4]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[5]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[6]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[7]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[8]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[9]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[10]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[11]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[12]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[13]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[14]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[15]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[16]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[17]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[18]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[19]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[20]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[21]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[22]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[23]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[24]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[25]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[26]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[27]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[28]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[29]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[30]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[31]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[32]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[33]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+do test.do
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[0]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[1]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[2]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[3]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[4]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[5]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[6]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[7]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[8]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[9]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[10]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[11]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[12]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[13]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[14]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[15]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[16]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[17]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[18]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[19]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[20]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[21]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[22]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[23]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[24]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[25]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[26]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[27]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[28]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[29]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[30]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[31]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[32]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+# ** Warning: (vsim-3017) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Too few port connections. Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /brute_force/generate_block_identifier[33]/d0 File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv
+# ** Warning: (vsim-3722) C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv(2645): [TFMPC] - Missing connection for port 'rdy'.
+run
+run
+run
+run

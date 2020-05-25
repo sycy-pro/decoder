@@ -1,0 +1,1287 @@
+Analysis & Synthesis report for tea_asmd
+Mon May 25 21:38:17 2020
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |brute_force|state_reg
+  9. State Machine - |brute_force|tea_asmd:generate_block_identifier[33].d0|state_reg
+ 10. State Machine - |brute_force|tea_asmd:generate_block_identifier[32].d0|state_reg
+ 11. State Machine - |brute_force|tea_asmd:generate_block_identifier[31].d0|state_reg
+ 12. State Machine - |brute_force|tea_asmd:generate_block_identifier[30].d0|state_reg
+ 13. State Machine - |brute_force|tea_asmd:generate_block_identifier[29].d0|state_reg
+ 14. State Machine - |brute_force|tea_asmd:generate_block_identifier[28].d0|state_reg
+ 15. State Machine - |brute_force|tea_asmd:generate_block_identifier[27].d0|state_reg
+ 16. State Machine - |brute_force|tea_asmd:generate_block_identifier[26].d0|state_reg
+ 17. State Machine - |brute_force|tea_asmd:generate_block_identifier[25].d0|state_reg
+ 18. State Machine - |brute_force|tea_asmd:generate_block_identifier[24].d0|state_reg
+ 19. State Machine - |brute_force|tea_asmd:generate_block_identifier[23].d0|state_reg
+ 20. State Machine - |brute_force|tea_asmd:generate_block_identifier[22].d0|state_reg
+ 21. State Machine - |brute_force|tea_asmd:generate_block_identifier[21].d0|state_reg
+ 22. State Machine - |brute_force|tea_asmd:generate_block_identifier[20].d0|state_reg
+ 23. State Machine - |brute_force|tea_asmd:generate_block_identifier[19].d0|state_reg
+ 24. State Machine - |brute_force|tea_asmd:generate_block_identifier[18].d0|state_reg
+ 25. State Machine - |brute_force|tea_asmd:generate_block_identifier[17].d0|state_reg
+ 26. State Machine - |brute_force|tea_asmd:generate_block_identifier[16].d0|state_reg
+ 27. State Machine - |brute_force|tea_asmd:generate_block_identifier[15].d0|state_reg
+ 28. State Machine - |brute_force|tea_asmd:generate_block_identifier[14].d0|state_reg
+ 29. State Machine - |brute_force|tea_asmd:generate_block_identifier[13].d0|state_reg
+ 30. State Machine - |brute_force|tea_asmd:generate_block_identifier[12].d0|state_reg
+ 31. State Machine - |brute_force|tea_asmd:generate_block_identifier[11].d0|state_reg
+ 32. State Machine - |brute_force|tea_asmd:generate_block_identifier[10].d0|state_reg
+ 33. State Machine - |brute_force|tea_asmd:generate_block_identifier[9].d0|state_reg
+ 34. State Machine - |brute_force|tea_asmd:generate_block_identifier[8].d0|state_reg
+ 35. State Machine - |brute_force|tea_asmd:generate_block_identifier[7].d0|state_reg
+ 36. State Machine - |brute_force|tea_asmd:generate_block_identifier[6].d0|state_reg
+ 37. State Machine - |brute_force|tea_asmd:generate_block_identifier[5].d0|state_reg
+ 38. State Machine - |brute_force|tea_asmd:generate_block_identifier[4].d0|state_reg
+ 39. State Machine - |brute_force|tea_asmd:generate_block_identifier[3].d0|state_reg
+ 40. State Machine - |brute_force|tea_asmd:generate_block_identifier[2].d0|state_reg
+ 41. State Machine - |brute_force|tea_asmd:generate_block_identifier[1].d0|state_reg
+ 42. State Machine - |brute_force|tea_asmd:generate_block_identifier[0].d0|state_reg
+ 43. Registers Removed During Synthesis
+ 44. General Register Statistics
+ 45. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 46. Port Connectivity Checks: "tea_asmd:generate_block_identifier[33].d0"
+ 47. Port Connectivity Checks: "tea_asmd:generate_block_identifier[32].d0"
+ 48. Port Connectivity Checks: "tea_asmd:generate_block_identifier[31].d0"
+ 49. Port Connectivity Checks: "tea_asmd:generate_block_identifier[30].d0"
+ 50. Port Connectivity Checks: "tea_asmd:generate_block_identifier[29].d0"
+ 51. Port Connectivity Checks: "tea_asmd:generate_block_identifier[28].d0"
+ 52. Port Connectivity Checks: "tea_asmd:generate_block_identifier[27].d0"
+ 53. Port Connectivity Checks: "tea_asmd:generate_block_identifier[26].d0"
+ 54. Port Connectivity Checks: "tea_asmd:generate_block_identifier[25].d0"
+ 55. Port Connectivity Checks: "tea_asmd:generate_block_identifier[24].d0"
+ 56. Port Connectivity Checks: "tea_asmd:generate_block_identifier[23].d0"
+ 57. Port Connectivity Checks: "tea_asmd:generate_block_identifier[22].d0"
+ 58. Port Connectivity Checks: "tea_asmd:generate_block_identifier[21].d0"
+ 59. Port Connectivity Checks: "tea_asmd:generate_block_identifier[20].d0"
+ 60. Port Connectivity Checks: "tea_asmd:generate_block_identifier[19].d0"
+ 61. Port Connectivity Checks: "tea_asmd:generate_block_identifier[18].d0"
+ 62. Port Connectivity Checks: "tea_asmd:generate_block_identifier[17].d0"
+ 63. Port Connectivity Checks: "tea_asmd:generate_block_identifier[16].d0"
+ 64. Port Connectivity Checks: "tea_asmd:generate_block_identifier[15].d0"
+ 65. Port Connectivity Checks: "tea_asmd:generate_block_identifier[14].d0"
+ 66. Port Connectivity Checks: "tea_asmd:generate_block_identifier[13].d0"
+ 67. Port Connectivity Checks: "tea_asmd:generate_block_identifier[12].d0"
+ 68. Port Connectivity Checks: "tea_asmd:generate_block_identifier[11].d0"
+ 69. Port Connectivity Checks: "tea_asmd:generate_block_identifier[10].d0"
+ 70. Port Connectivity Checks: "tea_asmd:generate_block_identifier[9].d0"
+ 71. Port Connectivity Checks: "tea_asmd:generate_block_identifier[8].d0"
+ 72. Port Connectivity Checks: "tea_asmd:generate_block_identifier[7].d0"
+ 73. Port Connectivity Checks: "tea_asmd:generate_block_identifier[6].d0"
+ 74. Port Connectivity Checks: "tea_asmd:generate_block_identifier[5].d0"
+ 75. Port Connectivity Checks: "tea_asmd:generate_block_identifier[4].d0"
+ 76. Port Connectivity Checks: "tea_asmd:generate_block_identifier[3].d0"
+ 77. Port Connectivity Checks: "tea_asmd:generate_block_identifier[2].d0"
+ 78. Port Connectivity Checks: "tea_asmd:generate_block_identifier[1].d0"
+ 79. Port Connectivity Checks: "tea_asmd:generate_block_identifier[0].d0"
+ 80. Post-Synthesis Netlist Statistics for Top Partition
+ 81. Elapsed Time Per Partition
+ 82. Analysis & Synthesis Messages
+ 83. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 25 21:38:17 2020       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; tea_asmd                                    ;
+; Top-level Entity Name              ; brute_force                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 20,072                                      ;
+;     Total combinational functions  ; 18,686                                      ;
+;     Dedicated logic registers      ; 5,154                                       ;
+; Total registers                    ; 5154                                        ;
+; Total pins                         ; 117                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; brute_force        ; tea_asmd           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; brute_force.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv ;         ;
+; tea_asmd.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv    ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 20,072    ;
+;                                             ;           ;
+; Total combinational functions               ; 18686     ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 5306      ;
+;     -- 3 input functions                    ; 8675      ;
+;     -- <=2 input functions                  ; 4705      ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 9562      ;
+;     -- arithmetic mode                      ; 9124      ;
+;                                             ;           ;
+; Total registers                             ; 5154      ;
+;     -- Dedicated logic registers            ; 5154      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 117       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 5154      ;
+; Total fan-out                               ; 80781     ;
+; Average fan-out                             ; 3.36      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-------------+--------------+
+; |brute_force                                   ; 18686 (5086)        ; 5154 (156)                ; 0           ; 0            ; 0       ; 0         ; 117  ; 0            ; |brute_force                                           ; brute_force ; work         ;
+;    |tea_asmd:generate_block_identifier[0].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[0].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[10].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[10].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[11].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[11].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[12].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[12].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[13].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[13].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[14].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[14].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[15].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[15].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[16].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[16].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[17].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[17].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[18].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[18].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[19].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[19].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[1].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[1].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[20].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[20].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[21].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[21].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[22].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[22].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[23].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[23].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[24].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[24].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[25].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[25].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[26].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[26].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[27].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[27].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[28].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[28].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[29].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[29].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[2].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[2].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[30].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[30].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[31].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[31].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[32].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[32].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[33].d0| ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[33].d0 ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[3].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[3].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[4].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[4].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[5].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[5].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[6].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[6].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[7].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[7].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[8].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[8].d0  ; tea_asmd    ; work         ;
+;    |tea_asmd:generate_block_identifier[9].d0|  ; 400 (400)           ; 147 (147)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |brute_force|tea_asmd:generate_block_identifier[9].d0  ; tea_asmd    ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |brute_force|state_reg                                              ;
++-----------------+---------------+----------------+-----------------+----------------+
+; Name            ; state_reg.rip ; state_reg.long ; state_reg.short ; state_reg.dict ;
++-----------------+---------------+----------------+-----------------+----------------+
+; state_reg.dict  ; 0             ; 0              ; 0               ; 0              ;
+; state_reg.short ; 0             ; 0              ; 1               ; 1              ;
+; state_reg.long  ; 0             ; 1              ; 0               ; 1              ;
+; state_reg.rip   ; 1             ; 0              ; 0               ; 1              ;
++-----------------+---------------+----------------+-----------------+----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[33].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[32].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[31].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[30].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[29].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[28].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[27].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[26].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[25].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[24].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[23].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[22].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[21].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[20].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[19].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[18].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[17].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[16].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[15].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[14].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[13].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[12].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[11].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[10].d0|state_reg ;
++----------------+----------------+----------------+-------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco                ;
++----------------+----------------+----------------+-------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                             ;
+; state_reg.deco ; 1              ; 0              ; 1                             ;
+; state_reg.fini ; 1              ; 1              ; 0                             ;
++----------------+----------------+----------------+-------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[9].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[8].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[7].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[6].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[5].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[4].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[3].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[2].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[1].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |brute_force|tea_asmd:generate_block_identifier[0].d0|state_reg ;
++----------------+----------------+----------------+------------------------------+
+; Name           ; state_reg.idle ; state_reg.fini ; state_reg.deco               ;
++----------------+----------------+----------------+------------------------------+
+; state_reg.idle ; 0              ; 0              ; 0                            ;
+; state_reg.deco ; 1              ; 0              ; 1                            ;
+; state_reg.fini ; 1              ; 1              ; 0                            ;
++----------------+----------------+----------------+------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                           ;
++---------------------------------------------------------------------+----------------------------------------+
+; Register name                                                       ; Reason for Removal                     ;
++---------------------------------------------------------------------+----------------------------------------+
+; tea_asmd:generate_block_identifier[33].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[32].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[31].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[30].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[29].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[28].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[27].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[26].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[25].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[24].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[23].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[22].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[21].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[20].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[19].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[18].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[17].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[16].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[15].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[14].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[13].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[12].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[11].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[10].d0|key_reg[7,15,23,31,39,47] ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[9].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[8].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[7].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[6].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[5].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[4].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[3].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[2].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[1].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; tea_asmd:generate_block_identifier[0].d0|key_reg[7,15,23,31,39,47]  ; Stuck at GND due to stuck port data_in ;
+; state_reg~4                                                         ; Lost fanout                            ;
+; state_reg~5                                                         ; Lost fanout                            ;
+; Total Number of Removed Registers = 206                             ;                                        ;
++---------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 5154  ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 2176  ;
+; Number of registers using Asynchronous Clear ; 5154  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4998  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |brute_force|start_reg[24]                                         ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |brute_force|start_reg[2]                                          ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[33].d0|sum_reg[4]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[33].d0|v1_reg[25]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[32].d0|sum_reg[0]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[32].d0|v1_reg[14]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[31].d0|sum_reg[24] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[31].d0|v0_reg[29]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[30].d0|sum_reg[9]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[30].d0|v1_reg[22]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[29].d0|sum_reg[31] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[29].d0|v1_reg[22]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[28].d0|cnt_reg[0]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[28].d0|v0_reg[19]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[27].d0|cnt_reg[2]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[27].d0|v0_reg[7]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[26].d0|sum_reg[29] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[26].d0|v0_reg[22]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[25].d0|sum_reg[20] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[25].d0|v0_reg[25]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[24].d0|sum_reg[31] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[24].d0|v1_reg[15]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[23].d0|sum_reg[0]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[23].d0|v0_reg[31]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[22].d0|sum_reg[13] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[22].d0|v0_reg[1]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[21].d0|sum_reg[6]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[21].d0|v1_reg[24]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[20].d0|sum_reg[8]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[20].d0|v1_reg[1]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[19].d0|sum_reg[10] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[19].d0|v1_reg[22]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[18].d0|sum_reg[7]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[18].d0|v0_reg[27]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[17].d0|sum_reg[2]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[17].d0|v1_reg[24]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[16].d0|sum_reg[2]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[16].d0|v0_reg[27]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[15].d0|cnt_reg[4]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[15].d0|v0_reg[18]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[14].d0|sum_reg[0]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[14].d0|v0_reg[0]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[13].d0|sum_reg[20] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[13].d0|v1_reg[13]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[12].d0|sum_reg[29] ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[12].d0|v1_reg[7]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[11].d0|sum_reg[0]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[11].d0|v0_reg[16]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[10].d0|cnt_reg[0]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[10].d0|v0_reg[23]  ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[9].d0|cnt_reg[4]   ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[9].d0|v0_reg[1]    ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[8].d0|sum_reg[12]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[8].d0|v1_reg[30]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[7].d0|sum_reg[31]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[7].d0|v1_reg[24]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[6].d0|sum_reg[30]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[6].d0|v1_reg[0]    ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[5].d0|sum_reg[5]   ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[5].d0|v0_reg[29]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[4].d0|sum_reg[31]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[4].d0|v0_reg[6]    ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[3].d0|sum_reg[0]   ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[3].d0|v1_reg[17]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[2].d0|sum_reg[3]   ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[2].d0|v0_reg[11]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[1].d0|sum_reg[19]  ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[1].d0|v0_reg[20]   ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 37 LEs               ; 37 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[0].d0|sum_reg[2]   ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |brute_force|tea_asmd:generate_block_identifier[0].d0|v1_reg[13]   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |brute_force|Selector3                                             ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |brute_force|Selector28                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[33].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[32].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[31].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[30].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[29].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[28].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[27].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[26].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[25].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[24].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[23].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[22].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[21].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[20].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[19].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[18].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[17].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[16].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[15].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[14].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[13].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[12].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[11].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[10].d0"                                                               ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[9].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[8].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[7].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[6].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[5].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[4].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[3].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[2].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[1].d0"                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; rdy  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tea_asmd:generate_block_identifier[0].d0"                                                                   ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; key[47] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; key[39] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; key[31] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; key[23] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; key[15] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; key[7]  ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; rdy     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 117                         ;
+; cycloneiii_ff         ; 5154                        ;
+;     CLR               ; 150                         ;
+;     CLR SCLR          ; 6                           ;
+;     ENA CLR           ; 2822                        ;
+;     ENA CLR SLD       ; 2176                        ;
+; cycloneiii_lcell_comb ; 18686                       ;
+;     arith             ; 9124                        ;
+;         2 data inputs ; 3616                        ;
+;         3 data inputs ; 5508                        ;
+;     normal            ; 9562                        ;
+;         0 data inputs ; 69                          ;
+;         1 data inputs ; 140                         ;
+;         2 data inputs ; 880                         ;
+;         3 data inputs ; 3167                        ;
+;         4 data inputs ; 5306                        ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 7.71                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Mon May 25 21:37:01 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tea_asmd -c tea_asmd
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file brute_force.sv
+    Info (12023): Found entity 1: brute_force File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tea_asmd.sv
+    Info (12023): Found entity 1: tea_asmd File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/tea_asmd.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file test_tea_asmd.sv
+    Info (12023): Found entity 1: test_tea_asmd File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/test_tea_asmd.sv Line: 3
+Info (12127): Elaborating entity "brute_force" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at brute_force.sv(2548): object "key_reg" assigned a value but never read File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 2548
+Warning (10270): Verilog HDL Case Statement warning at brute_force.sv(2605): incomplete case statement has no default case item File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 2605
+Info (10264): Verilog HDL Case Statement information at brute_force.sv(2605): all case item expressions in this case statement are onehot File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 2605
+Info (12128): Elaborating entity "tea_asmd" for hierarchy "tea_asmd:generate_block_identifier[0].d0" File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 2654
+Warning (12241): 34 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "key_out[7]" is stuck at GND File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 8
+    Warning (13410): Pin "key_out[15]" is stuck at GND File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 8
+    Warning (13410): Pin "key_out[23]" is stuck at GND File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 8
+    Warning (13410): Pin "key_out[31]" is stuck at GND File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 8
+    Warning (13410): Pin "key_out[39]" is stuck at GND File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 8
+    Warning (13410): Pin "key_out[47]" is stuck at GND File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/output_files/tea_asmd.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "start" File: C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/brute_force.sv Line: 5
+Info (21057): Implemented 20232 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 49 output pins
+    Info (21061): Implemented 20115 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4940 megabytes
+    Info: Processing ended: Mon May 25 21:38:17 2020
+    Info: Elapsed time: 00:01:16
+    Info: Total CPU time (on all processors): 00:01:33
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/krzys/Programs/Verilog/SYCY/TEA_ASMD/output_files/tea_asmd.map.smsg.
+
+
