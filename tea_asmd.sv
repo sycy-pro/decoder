@@ -33,13 +33,7 @@ reg [5:0] cnt_reg, cnt_next;
 wire [63:0] v;
 assign v = {v0_reg, v1_reg};
 
-reg rdy_reg, rdy_next;
-
-
 assign valid = v[63:32] == 32'h46445025 && v[23:16] == 8'h2e && v[7:0] == 8'h2d;
-//assign valid = v == 64'h417eb462f765c165;
-assign rdy = rdy_reg;
-
 
 wire [31:0] k0, k1, k2, k3;
 

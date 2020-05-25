@@ -12,7 +12,7 @@ module brute_force(
 
 localparam DECRYPT_CYLES = 34;
 localparam DECRYPT_CYLES_LOG = 6;
-localparam PARARELL_MODULES = 5;
+localparam PARARELL_MODULES = 4;
 
 localparam DICT4_SIZE = 2500;
 
@@ -2550,7 +2550,7 @@ localparam [STATE_SIZE-1:0] dict = 2'h0,
 
 reg [STATE_SIZE-1:0] state_reg, state_next;
 
-reg [0 : PARARELL_MODULES - 1] [47:0] key_reg, key_next;
+reg [47:0] key_reg, key_next;
 
 reg [DECRYPT_CYLES - 1 : 0] start_reg, start_next;
 reg [0 : PARARELL_MODULES - 1] valid_reg, valid_next;
@@ -2558,11 +2558,9 @@ reg rdy_reg, rdy_next;
 
 reg [DECRYPT_CYLES_LOG - 1 : 0] decryptor_counter_reg, decryptor_counter_next;
 
-reg [47:0] final_key_reg, final_key_next;
-
 assign valid = valid_reg > 0;
 assign rdy = rdy_reg;
-assign key_out = final_key_reg;
+assign key_out = key_reg;
 
 wire [0 : PARARELL_MODULES - 1] [47:0] temp_key;
 
@@ -2581,8 +2579,6 @@ always@(posedge clk, posedge rst) begin
         start_reg <= 0;
         rdy_reg <= 0;
         
-        final_key_reg <= 0;
-        
         key_reg <= 0;
         state_reg <= dict;
     end else begin
@@ -2594,8 +2590,6 @@ always@(posedge clk, posedge rst) begin
         valid_reg <= valid_next;
         start_reg <= start_next;
         rdy_reg <= rdy_next;
-        
-        final_key_reg <= final_key_next;
         
         key_reg <= key_next;
         state_reg <= state_next;
@@ -2616,7 +2610,7 @@ always@(*) begin
     counter_short_next = 0;
     counter_long_next = 0;
     rdy_next = 0;
-    final_key_next = final_key_reg;
+    key_next = key_reg;
     
     if(decryptor_counter_reg >= DECRYPT_CYLES) 
         decryptor_counter_next = 0;
@@ -2638,7 +2632,7 @@ always@(*) begin
         fini: begin
             rdy_next = 1;
             if(!rdy_reg)
-                final_key_next = temp_key[PARARELL_MODULES - 1];
+                key_next = temp_key[PARARELL_MODULES - 1];
         end
     endcase
 end
@@ -2651,15 +2645,17 @@ generate
         wire [35:0] counter_long_offset;
         assign counter_long_offset = counter_short_reg + p;
         
+        logic [47:0] key_gen;
+        
         always@(*) begin
-            key_next[p] = 0;
+            key_gen = 0;
             
             case(state_reg) 
                 dict: begin
-                    key_next[p] = {"e ", DICT4[counter_dict_reg + p]};
+                    key_gen = {"e ", DICT4[counter_dict_reg + p]};
                 end
                 short: begin
-                    key_next[p] = {
+                    key_gen = {
                         MAP_SHORT[counter_short_offset[29:25]],
                         MAP_SHORT[counter_short_offset[24:20]],
                         MAP_SHORT[counter_short_offset[19:15]],
@@ -2669,7 +2665,7 @@ generate
                     };
                 end
                 long: begin
-                    key_next[p] = {
+                    key_gen = {
                         MAP_LONG[counter_long_offset[35:30]],
                         MAP_LONG[counter_long_offset[29:24]],
                         MAP_LONG[counter_long_offset[23:18]],
@@ -2681,8 +2677,6 @@ generate
             endcase
         end
     
-        
-        wire [47:0] key_out_outer;
         wire [0 : DECRYPT_CYLES - 1] [47:0] key_out_gen;
         wire [0 : DECRYPT_CYLES - 1] valid_gen;
         
@@ -2696,7 +2690,7 @@ generate
                 .ena(ena),
                 .start(start_reg[i]),
                 .data(data),
-                .key(key_next[p]),
+                .key(key_gen),
                 .key_out(key_out_tmp),
                 .valid(valid_gen[i])
             );
