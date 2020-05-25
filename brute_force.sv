@@ -2554,8 +2554,13 @@ reg rdy_reg, rdy_next;
 
 reg [5:0] decryptor_counter_reg, decryptor_counter_next;
 
+reg [47:0] final_key_reg, final_key_next;
+
 assign valid = valid_reg > 0;
 assign rdy = rdy_reg;
+assign key_out = final_key_reg;
+
+wire [0:33] [47:0] temp_key;
 
 always@(posedge clk, posedge rst) begin
     if(rst) begin
@@ -2568,6 +2573,8 @@ always@(posedge clk, posedge rst) begin
         start_reg <= 0;
         rdy_reg <= 0;
         
+        final_key_reg <= 0;
+        
         key_reg <= 0;
         state_reg <= dict;
     end else begin
@@ -2579,6 +2586,8 @@ always@(posedge clk, posedge rst) begin
         valid_reg <= valid_next;
         start_reg <= start_next;
         rdy_reg <= rdy_next;
+        
+        final_key_reg <= final_key_next;
         
         key_reg <= key_next;
         state_reg <= state_next;
@@ -2600,6 +2609,7 @@ always@(*) begin
     counter_long_next = 0;
     key_next = 0;
     rdy_next = 0;
+    final_key_next = final_key_reg;
     
     if(decryptor_counter_reg >= 34) 
         decryptor_counter_next = 0;
@@ -2637,11 +2647,11 @@ always@(*) begin
         end
         fini: begin
             rdy_next = 1;
+            if(!rdy_reg)
+                final_key_next = temp_key[33];
         end
     endcase
 end
-
-logic [0:33] [47:0] temp_key;
 
 genvar i;
 
@@ -2669,7 +2679,5 @@ generate
         end
     end
 endgenerate
-
-assign key_out = temp_key[33];
 
 endmodule
