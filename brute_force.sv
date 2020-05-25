@@ -2645,6 +2645,12 @@ end
 
 generate
     for (p = 0; p< PARARELL_MODULES; p++) begin : gen_par
+        wire [29:0] counter_short_offset;
+        assign counter_short_offset = counter_short_reg + p;
+        
+        wire [35:0] counter_long_offset;
+        assign counter_long_offset = counter_short_reg + p;
+        
         always@(*) begin
             key_next[p] = 0;
             
@@ -2654,22 +2660,22 @@ generate
                 end
                 short: begin
                     key_next[p] = {
-                        MAP_SHORT[counter_short_reg[29:25]],
-                        MAP_SHORT[counter_short_reg[24:20]],
-                        MAP_SHORT[counter_short_reg[19:15]],
-                        MAP_SHORT[counter_short_reg[14:10]],
-                        MAP_SHORT[counter_short_reg[9:5]],
-                        MAP_SHORT[counter_short_reg[4:0] + p]
+                        MAP_SHORT[counter_short_offset[29:25]],
+                        MAP_SHORT[counter_short_offset[24:20]],
+                        MAP_SHORT[counter_short_offset[19:15]],
+                        MAP_SHORT[counter_short_offset[14:10]],
+                        MAP_SHORT[counter_short_offset[9:5]],
+                        MAP_SHORT[counter_short_offset[4:0]]
                     };
                 end
                 long: begin
                     key_next[p] = {
-                        MAP_LONG[counter_long_reg[35:30]],
-                        MAP_LONG[counter_long_reg[29:24]],
-                        MAP_LONG[counter_long_reg[23:18]],
-                        MAP_LONG[counter_long_reg[17:12]],
-                        MAP_LONG[counter_long_reg[11:6]],
-                        MAP_LONG[counter_long_reg[5:0] + p]
+                        MAP_LONG[counter_long_offset[35:30]],
+                        MAP_LONG[counter_long_offset[29:24]],
+                        MAP_LONG[counter_long_offset[23:18]],
+                        MAP_LONG[counter_long_offset[17:12]],
+                        MAP_LONG[counter_long_offset[11:6]],
+                        MAP_LONG[counter_long_offset[5:0]]
                     };
                 end
             endcase
