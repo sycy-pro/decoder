@@ -10,6 +10,10 @@ module brute_force(
     output rdy
 );
 
+localparam DECRYPT_CYLES = 34;
+localparam DECRYPT_CYLES_LOG = 6;
+localparam PARARELL_MODULES = 5;
+
 localparam DICT4_SIZE = 2500;
 
 localparam bit [31:0] DICT4 [DICT4_SIZE-1:0]= '{
@@ -2546,13 +2550,13 @@ localparam [STATE_SIZE-1:0] dict = 2'h0,
 
 reg [STATE_SIZE-1:0] state_reg, state_next;
 
-reg [47:0] key_reg, key_next;
+reg [0 : PARARELL_MODULES - 1] [47:0] key_reg, key_next;
 
-reg [33:0] start_reg, start_next;
-reg [33:0] valid_reg, valid_next;
+reg [DECRYPT_CYLES - 1 : 0] start_reg, start_next;
+reg [0 : PARARELL_MODULES - 1] valid_reg, valid_next;
 reg rdy_reg, rdy_next;
 
-reg [5:0] decryptor_counter_reg, decryptor_counter_next;
+reg [DECRYPT_CYLES_LOG - 1 : 0] decryptor_counter_reg, decryptor_counter_next;
 
 reg [47:0] final_key_reg, final_key_next;
 
@@ -2560,7 +2564,11 @@ assign valid = valid_reg > 0;
 assign rdy = rdy_reg;
 assign key_out = final_key_reg;
 
-wire [0:33] [47:0] temp_key;
+wire [0 : PARARELL_MODULES - 1] [47:0] temp_key;
+
+genvar i;  // In series modules (maximum is the cycle count of a signle module for a single decryption)
+
+genvar p; // Pararell modules
 
 always@(posedge clk, posedge rst) begin
     if(rst) begin
@@ -2597,8 +2605,8 @@ end
 always@(*) begin
     case(state_reg) 
         dict: state_next = valid ? fini : counter_dict_next > DICT4_SIZE ? short : dict;
-        short: state_next = valid ? fini : counter_short_next == 0 ? long : short;
-        long: state_next = valid || counter_long_next == 0 ? fini : long;
+        short: state_next = valid ? fini : counter_short_next < PARARELL_MODULES ? long : short;
+        long: state_next = valid || counter_long_next < PARARELL_MODULES ? fini : long;
         fini: state_next = fini;
     endcase
 end
@@ -2607,11 +2615,10 @@ always@(*) begin
     counter_dict_next = 0;
     counter_short_next = 0;
     counter_long_next = 0;
-    key_next = 0;
     rdy_next = 0;
     final_key_next = final_key_reg;
     
-    if(decryptor_counter_reg >= 34) 
+    if(decryptor_counter_reg >= DECRYPT_CYLES) 
         decryptor_counter_next = 0;
     else 
         decryptor_counter_next = decryptor_counter_reg + 1'b1;
@@ -2620,62 +2627,87 @@ always@(*) begin
     
     case(state_reg) 
         dict: begin
-            counter_dict_next = counter_dict_reg + 1'b1;
-            key_next = {"e ", DICT4[counter_dict_reg]};
+            counter_dict_next = counter_dict_reg + PARARELL_MODULES;
         end
         short: begin
-            counter_short_next = counter_short_reg + 1'b1;
-            key_next = {
-                MAP_SHORT[counter_short_reg[29:25]],
-                MAP_SHORT[counter_short_reg[24:20]],
-                MAP_SHORT[counter_short_reg[19:15]],
-                MAP_SHORT[counter_short_reg[14:10]],
-                MAP_SHORT[counter_short_reg[9:5]],
-                MAP_SHORT[counter_short_reg[4:0]]
-            };
+            counter_short_next = counter_short_reg + PARARELL_MODULES;
         end
         long: begin
-            counter_long_next = counter_long_reg + 1'b1;
-            key_next = {
-                MAP_LONG[counter_long_reg[35:30]],
-                MAP_LONG[counter_long_reg[29:24]],
-                MAP_LONG[counter_long_reg[23:18]],
-                MAP_LONG[counter_long_reg[17:12]],
-                MAP_LONG[counter_long_reg[11:6]],
-                MAP_LONG[counter_long_reg[5:0]]
-            };
+            counter_long_next = counter_long_reg + PARARELL_MODULES;
         end
         fini: begin
             rdy_next = 1;
             if(!rdy_reg)
-                final_key_next = temp_key[33];
+                final_key_next = temp_key[PARARELL_MODULES - 1];
         end
     endcase
 end
 
-genvar i;
-
 generate
-    wire [47:0] key_out_gen;
+    for (p = 0; p< PARARELL_MODULES; p++) begin : gen_par
+        always@(*) begin
+            key_next[p] = 0;
+            
+            case(state_reg) 
+                dict: begin
+                    key_next[p] = {"e ", DICT4[counter_dict_reg + p]};
+                end
+                short: begin
+                    key_next[p] = {
+                        MAP_SHORT[counter_short_reg[29:25]],
+                        MAP_SHORT[counter_short_reg[24:20]],
+                        MAP_SHORT[counter_short_reg[19:15]],
+                        MAP_SHORT[counter_short_reg[14:10]],
+                        MAP_SHORT[counter_short_reg[9:5]],
+                        MAP_SHORT[counter_short_reg[4:0] + p]
+                    };
+                end
+                long: begin
+                    key_next[p] = {
+                        MAP_LONG[counter_long_reg[35:30]],
+                        MAP_LONG[counter_long_reg[29:24]],
+                        MAP_LONG[counter_long_reg[23:18]],
+                        MAP_LONG[counter_long_reg[17:12]],
+                        MAP_LONG[counter_long_reg[11:6]],
+                        MAP_LONG[counter_long_reg[5:0] + p]
+                    };
+                end
+            endcase
+        end
     
-    for (i = 0; i < 34; i = i + 1) begin : generate_block_identifier
-        wire [47:0] key_out_tmp;
-         
-        tea_asmd d0 (
-            .clk(clk),
-            .rst(rst),
-            .ena(ena),
-            .start(start_reg[i]),
-            .data(data),
-            .key(key_next),
-            .key_out(key_out_tmp),
-            .valid(valid_next[i])
-        );
         
-        if(i > 0) begin
-            assign temp_key[i] = temp_key[i - 1] | ({48{valid_reg[i]}} & key_out_tmp);
+        wire [47:0] key_out_outer;
+        wire [0 : DECRYPT_CYLES - 1] [47:0] key_out_gen;
+        wire [0 : DECRYPT_CYLES - 1] valid_gen;
+        
+        
+        for (i = 0; i < DECRYPT_CYLES; i++) begin : gen_seq
+            wire [47:0] key_out_tmp;
+             
+            tea_asmd d0 (
+                .clk(clk),
+                .rst(rst),
+                .ena(ena),
+                .start(start_reg[i]),
+                .data(data),
+                .key(key_next[p]),
+                .key_out(key_out_tmp),
+                .valid(valid_gen[i])
+            );
+            
+            if(i > 0) begin
+                assign key_out_gen[i] = key_out_gen[i - 1] | ({48{valid_gen[i]}} & key_out_tmp);
+            end else begin
+                assign key_out_gen[i] = ({48{valid_gen[i]}} & key_out_tmp);
+            end
+        end
+        
+        assign valid_next[p] = valid_gen > 0;
+        
+        if(p > 0) begin
+            assign temp_key[p] = temp_key[p - 1] | ({48{valid_reg[p]}} & key_out_gen[DECRYPT_CYLES - 1]);
         end else begin
-            assign temp_key[i] = ({48{valid_reg[i]}} & key_out_tmp);
+            assign temp_key[p] = ({48{valid_reg[p]}} & key_out_gen[DECRYPT_CYLES - 1]);
         end
     end
 endgenerate

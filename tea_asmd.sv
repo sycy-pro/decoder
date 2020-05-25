@@ -7,6 +7,7 @@
     input [47:0] key,
     
     output valid,
+    output rdy,
     output [47:0] key_out
 );
 
