@@ -2555,9 +2555,10 @@ localparam [STATE_SIZE-1:0] init = 3'h0,
 reg [STATE_SIZE-1:0] state_reg, state_next;
 
 reg [47:0] key_reg, key_next;
+reg valid_reg, valid_next;
 
 reg [DECRYPT_CYLES - 1 : 0] start_reg, start_next;
-reg [0 : PARARELL_MODULES - 1] valid_reg, valid_next;
+wire [0 : PARARELL_MODULES - 1] valid_tmp;
 reg rdy_reg, rdy_next;
 
 reg [DECRYPT_CYLES_LOG - 1 : 0] decryptor_counter_reg, decryptor_counter_next;
@@ -2577,6 +2578,7 @@ always@(posedge clk, posedge rst) begin
         counter_dict_reg <= 0;
         counter_short_reg <= 0;
         counter_long_reg <= 0;
+        counter_full_reg <= 0;
         
         decryptor_counter_reg <= 0;
         valid_reg <= 0;
@@ -2584,11 +2586,12 @@ always@(posedge clk, posedge rst) begin
         rdy_reg <= 0;
         
         key_reg <= 0;
-        state_reg <= dict;
+        state_reg <= init;
     end else if(ena) begin
         counter_dict_reg <= counter_dict_next;
         counter_short_reg <= counter_short_next;
-        counter_long_reg <= counter_long_next; 
+        counter_long_reg <= counter_long_next;
+        counter_full_reg <= counter_full_next; 
         
         decryptor_counter_reg <= decryptor_counter_next;
         valid_reg <= valid_next;
@@ -2603,11 +2606,11 @@ end
 always@(*) begin
     case(state_reg) 
         init: state_next = start ? dict : init;
-        dict: state_next = valid ? fini : counter_dict_next > DICT4_SIZE ? short : dict;
-        short: state_next = valid ? fini : counter_short_next < PARARELL_MODULES ? long : short;
-        long: state_next = valid || counter_long_next < PARARELL_MODULES ? full : long;
-        full: state_next = valid || counter_full_next < PARARELL_MODULES ? fini : full;
-        fini: state_next = fini;
+        dict: state_next = valid_next ? fini : counter_dict_next > DICT4_SIZE ? short : dict;
+        short: state_next = valid_next ? fini : counter_short_next < PARARELL_MODULES ? long : short;
+        long: state_next = valid_next ? fini :  counter_long_next < PARARELL_MODULES ? full : long;
+        full: state_next = valid_next || counter_full_next < PARARELL_MODULES ? fini : full;
+        fini: state_next = init;
     endcase
 end
 
@@ -2615,28 +2618,35 @@ always@(*) begin
     counter_dict_next = 0;
     counter_short_next = 0;
     counter_long_next = 0;
+    counter_full_next = 0;
     rdy_next = 0;
     key_next = key_reg;
+    valid_next = valid_tmp > 0;
     
-    if(start_reg == init || decryptor_counter_reg >= DECRYPT_CYLES - 1) 
+    if(decryptor_counter_reg >= DECRYPT_CYLES - 1) 
         decryptor_counter_next = 0;
     else 
         decryptor_counter_next = decryptor_counter_reg + 1'b1;
         
     start_next = 1 << decryptor_counter_reg;
     
-    if(state_next == fini) begin
+    if(valid_next) begin 
+        key_next = temp_key[PARARELL_MODULES - 1];
         rdy_next = 1;
-        start_next = 0;
-        if(!rdy_reg)
-            key_next = temp_key[PARARELL_MODULES - 1];
     end
     
     case(state_reg) 
+        init: begin
+            if(!start) begin
+                decryptor_counter_next = 0;
+                start_next = 0;
+            end
+        end
         dict: counter_dict_next = counter_dict_reg + PARARELL_MODULES;
         short: counter_short_next = counter_short_reg + PARARELL_MODULES;
         long: counter_long_next = counter_long_reg + PARARELL_MODULES;
         long: counter_full_next = counter_full_reg + PARARELL_MODULES;
+        fini: decryptor_counter_next = 0;
     endcase
 end
 
@@ -2707,13 +2717,13 @@ generate
             end
         end
         
-        assign valid_next[p] = valid_gen > 0;
+        assign valid_tmp[p] = valid_gen > 0;
         
         // Accumulate the valid key from pararell modules
         if(p > 0) begin
-            assign temp_key[p] = temp_key[p - 1] | ({48{valid_reg[p]}} & key_out_gen[DECRYPT_CYLES - 1]);
+            assign temp_key[p] = temp_key[p - 1] | ({48{valid_tmp[p]}} & key_out_gen[DECRYPT_CYLES - 1]);
         end else begin
-            assign temp_key[p] = ({48{valid_reg[p]}} & key_out_gen[DECRYPT_CYLES - 1]);
+            assign temp_key[p] = ({48{valid_tmp[p]}} & key_out_gen[DECRYPT_CYLES - 1]);
         end
     end
 endgenerate
