@@ -12,7 +12,7 @@ module brute_force(
 
 localparam DECRYPT_CYLES = 34;
 localparam DECRYPT_CYLES_LOG = 6;  // ceil(log2(DECRYPT_CYLES))
-localparam PARARELL_MODULES = 7;
+localparam PARARELL_MODULES = 6;
 
 localparam DICT4_SIZE = 2500;
 localparam DICT4_SIZE_LOG = 12;  // ceil(log2(DICT4_SIZE))
