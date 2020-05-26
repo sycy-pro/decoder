@@ -2541,13 +2541,15 @@ localparam bit [7:0] MAP_LONG [0:63] = '{
 reg [DICT4_SIZE_LOG - 1 : 0] counter_dict_reg, counter_dict_next;
 reg [29:0] counter_short_reg, counter_short_next;
 reg [35:0] counter_long_reg, counter_long_next;
+reg [47:0] counter_full_reg, counter_full_next;
 
 localparam STATE_SIZE = 3;
 localparam [STATE_SIZE-1:0] init = 3'h0,
                             dict = 3'h1,
                             short = 3'h2,
                             long = 3'h3,
-                            fini = 3'h4;
+                            full = 3'h4,
+                            fini = 3'h5;
 
 
 reg [STATE_SIZE-1:0] state_reg, state_next;
@@ -2603,7 +2605,8 @@ always@(*) begin
         init: state_next = start ? dict : init;
         dict: state_next = valid ? fini : counter_dict_next > DICT4_SIZE ? short : dict;
         short: state_next = valid ? fini : counter_short_next < PARARELL_MODULES ? long : short;
-        long: state_next = valid || counter_long_next < PARARELL_MODULES ? fini : long;
+        long: state_next = valid || counter_long_next < PARARELL_MODULES ? full : long;
+        full: state_next = valid || counter_full_next < PARARELL_MODULES ? fini : full;
         fini: state_next = fini;
     endcase
 end
@@ -2630,15 +2633,10 @@ always@(*) begin
     end
     
     case(state_reg) 
-        dict: begin
-            counter_dict_next = counter_dict_reg + PARARELL_MODULES;
-        end
-        short: begin
-            counter_short_next = counter_short_reg + PARARELL_MODULES;
-        end
-        long: begin
-            counter_long_next = counter_long_reg + PARARELL_MODULES;
-        end
+        dict: counter_dict_next = counter_dict_reg + PARARELL_MODULES;
+        short: counter_short_next = counter_short_reg + PARARELL_MODULES;
+        long: counter_long_next = counter_long_reg + PARARELL_MODULES;
+        long: counter_full_next = counter_full_reg + PARARELL_MODULES;
     endcase
 end
 
@@ -2679,6 +2677,7 @@ generate
                         MAP_LONG[counter_long_offset[5:0]]
                     };
                 end
+                full: key_gen = counter_full_next;
             endcase
         end
     
